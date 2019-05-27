@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>so nguyen to</title>
+</head>
+<body>
+<!--<h1>Hien 20 so nguyen to dau tien</h1>-->
+<input type="text" id="number" value="" placeholder="Nhap so SNT can hien thi">
+<input type="submit" value="In ra" onclick="check()">
+<script>
+
+    function check() {
+        let gioihan = parseInt(document.getElementById('number').value);
+        let count = 1;
+        let n = 0;
+        do {
+            let flag = true;
+            if (n < 2) {
+                flag = false;
+            } else {
+                for (let i = 2; i < n; i++) {
+                    if (n % i == 0) {
+                        flag = false;
+                        break;
+                    }
+                }
+            }
+            if (flag == true) {
+                document.write(n + " ");
+                count++;
+            }
+            n++;
+        }
+        while (count <= gioihan);
+    }
+
+</script>
+</body>
+</html>
